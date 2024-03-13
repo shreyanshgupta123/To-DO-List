@@ -1,0 +1,80 @@
+<!-- <button mat-raised-button (click)="isLinear = !isLinear" id="toggle-linear">
+  {{!isLinear ? 'Enable linear mode' : 'Disable linear mode'}}
+</button> -->
+<mat-stepper [linear]="isLinear" #stepper>
+  <mat-step [stepControl]="firstFormGroup">
+    <form [formGroup]="firstFormGroup">
+      <ng-template matStepLabel>FAQs (Frequently Asked Questions)</ng-template>
+      <div>
+        <mat-drawer-container>
+         <h3> How do I add a new task to my todo list?</h3>
+        </mat-drawer-container>
+       <p>To add a new task, simply click on the input field at the top of the page and type in the task description. Press the "Enter" key or click the "Add Task" button to save the task to your list.</p>
+       <mat-drawer-container>
+        <h3> How do I mark a task as completed?</h3>
+       </mat-drawer-container>
+       <p>To mark a task as completed, simply click on the checkbox next to the task. The task will be visually indicated as completed, and you can easily distinguish it from incomplete tasks.</p>
+
+       <mat-drawer-container>
+        <h3>Can I edit or update a task after adding it to the list?</h3>
+       </mat-drawer-container>
+       <p>Yes, you can edit a task by clicking on the task description. This will bring up an edit mode where you can modify the task's details. Press the "Enter" key or click outside the edit field to save your changes.</p>
+
+       <mat-drawer-container>
+        <h3>How do I delete a task from my todo list?</h3>
+       </mat-drawer-container>
+       <p>To delete a task, hover over the task you want to delete and click on the delete icon (e.g., trash bin icon). Confirm the deletion if prompted, and the task will be removed from your list.</p>
+
+       <mat-drawer-container>
+        <h3>How can I filter tasks to view only completed or incomplete tasks?</h3>
+       </mat-drawer-container>
+       <p>You can filter tasks by their status (completed or incomplete) using the filter options provided in the side menu. Simply select the desired status from the filter dropdown menu to apply the filter.</p>
+
+       <mat-drawer-container>
+        <h3>How often is the application updated with new features or improvements?</h3>
+       </mat-drawer-container>
+       <p>We strive to continuously improve the application by releasing regular updates with new features, enhancements, and bug fixes. You can stay informed about updates and announcements by checking our website or following us on social media.</p>
+
+    </div>
+    <h3>Give us a rating </h3>
+    <ngb-rating [(rate)]="rating">
+      <ng-template let-fill="fill" let-index="index">
+        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-star" viewBox="0 0 16 16">
+          <path d="M2.866 14.85c-.078.444.36.791.746.593l4.39-2.256 4.389 2.256c.386.198.824-.149.746-.592l-.83-4.73 3.522-3.356c.33-.314.16-.888-.282-.95l-4.898-.696L8.465.792a.513.513 0 0 0-.927 0L5.354 5.12l-4.898.696c-.441.062-.612.636-.283.95l3.523 3.356-.83 4.73zm4.905-2.767-3.686 1.894.694-3.957a.56.56 0 0 0-.163-.505L1.71 6.745l4.052-.576a.53.53 0 0 0 .393-.288L8 2.223l1.847 3.658a.53.53 0 0 0 .393.288l4.052.575-2.906 2.77a.56.56 0 0 0-.163.506l.694 3.957-3.686-1.894a.5.5 0 0 0-.461 0z"/>
+        </svg>
+        <i class="bi-star{{ fill === 100 ? '-fill' : '' }}" [class.filled]="fill === 100" [class.low]="index < 3"></i>
+      </ng-template>
+    </ngb-rating>
+    <hr />
+    <pre>Rate: <b>{{rating}}</b></pre>
+    </form>
+    <button mat-raised-button color="warn">Rate Us!</button>
+  </mat-step>
+  <mat-step [stepControl]="secondFormGroup" label="Tutorials/Guides:">
+<app-tutorial-videos></app-tutorial-videos>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Feedback Form</ng-template>
+    <app-feedbackform></app-feedbackform>
+    <div>
+      <button mat-button matStepperPrevious>Back</button>
+      <button mat-button (click)="stepper.reset()">Reset</button>
+    </div>
+  </mat-step>
+  <mat-step>
+    <ng-template matStepLabel>Contact Us</ng-template>
+<div class="container">
+<div class="row">
+  <div class="col" id="Col1">
+  <h2><b>Contact Details: </b></h2>
+
+  </div>
+  <br>
+  <div class="col" id="Col2">
+    <h2><b>Mail Address: </b></h2>
+  </div>
+</div>
+</div>
+  </mat-step>
+</mat-stepper>
+

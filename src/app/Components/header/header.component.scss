@@ -1,0 +1,83 @@
+.container
+{
+  background:transparent;
+  width: auto;
+  position:relative;
+  padding:20px;
+  border-radius: 10px;
+  text-align: center;
+bottom: 80px;
+}
+h1 {
+  font-size: 80px;
+  color: transparent;
+  background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  margin: 0;
+  padding: 50px 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: slideIn 2s forwards;
+}
+
+@keyframes slideIn {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(0); }
+}
+.container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ // background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+  background-size: cover; /* Adjust to your preference */
+  background-position: center; /* Adjust to your preference */
+  border-radius: 1000px;
+  background-color:rgba(241, 234, 234, 0.959); //rgba(241, 234, 234, 0.959)
+margin-top:-100px;
+}
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+form{
+  align-items: center;
+}
+
+button{
+justify-content: center;
+align-items: center;
+position: center;
+display:flex
+}
+
+.container-fluid{
+  padding: 100px;
+  border-radius: 300px;
+
+}
+#cont{
+background:whitesmoke;
+padding: 1px;
+border-radius: 300px;
+}
+h2{
+  color: transparent;
+  background-image: url('https://mdbootstrap.com/img/Photos/Others/images/76.jpg');
+  -webkit-background-clip: text;
+  background-clip: text;
+  text-align: center;
+  margin: 0;
+  overflow: hidden;
+  white-space: nowrap;
+  animation: slideIn 2s forwards;
+}
+
